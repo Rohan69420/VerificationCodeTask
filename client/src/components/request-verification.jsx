@@ -36,7 +36,7 @@ const RequestCard = () => {
   //POST request to back-end
   const sendData = async (code) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API_URL}/verifycode`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/verifycode`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
