@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CodeInput from "./code-input";
 import validator from 'validator';
 
+
 const RequestCard = () => {
   const [phoneEmail, setPhoneEmail] = useState("");
   const [showCodeInput, setShowCodeInput] = useState(false);
@@ -35,7 +36,7 @@ const RequestCard = () => {
   //POST request to back-end
   const sendData = async (code) => {
     try {
-      const response = await fetch("http://localhost:8080/verifycode", {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_API_URL}/verifycode`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
