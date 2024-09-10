@@ -7,6 +7,7 @@ const RequestCard = () => {
   const [phoneEmail, setPhoneEmail] = useState("");
   const [showCodeInput, setShowCodeInput] = useState(false);
   const [invalidPhoneEmail,setInvalidPhoneEmail] = useState(false);
+  const serverURL = "https://verification-code-task-backend.vercel.app";
 
   const handleChange = (event) => {
     setPhoneEmail(event.target.value);
@@ -36,7 +37,7 @@ const RequestCard = () => {
   //POST request to back-end
   const sendData = async (code) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/verifycode`, {
+      const response = await fetch(`${serverURL}/verifycode`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
