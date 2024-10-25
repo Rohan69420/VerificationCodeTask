@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 //import CodeInput from '../../components/code-input';
 import CodeInput from '../../components/CodeInput/CodeInput.jsx';
+import appEnums from '../../enums/inputData.jsx';
 
 const propTypes = {
     onCodeSubmit: PropTypes.func,
@@ -20,7 +21,7 @@ const VerificationView =({...props}) => {
 
     return(
         <div>
-            <CodeInput length={6} onCodeSubmit={onCodeSubmit}/>
+            <CodeInput length={appEnums.length} onCodeSubmit={onCodeSubmit}/>
         </div>
     );
 };
