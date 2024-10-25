@@ -1,6 +1,6 @@
 import "./App.css";
 import RequestCard from "./components/request-verification";
-import Verification from "./pages/VerificationV2.jsx";
+import Verification from "./pages/verification";
 
 function App() {
 

@@ -1,11 +1,15 @@
 const devConfig = {
-  baseUrl: "https://verification-code-task-backend.vercel.app",
+  baseUrl: "https://verification-code-task-backend.vercel.app/verifycode",
 };
 
 const prodConfig = {
-  baseUrl: "https://verification-code-task-backend.vercel.app",
+  baseUrl: "https://verification-code-task-backend.vercel.app/verifycode",
 };
 
-const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
+if (process.env.NODE_ENV == "production") {
+  config = prodConfig;
+} else {
+  config = devConfig;
+}
 
-export default config; 
+export default config;
