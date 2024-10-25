@@ -20,7 +20,7 @@ const VerificationView =({...props}) => {
 
     return(
         <div>
-            <CodeInput onCodeSubmit={onCodeSubmit}/>
+            <CodeInput length={6} onCodeSubmit={onCodeSubmit}/>
         </div>
     );
 };
